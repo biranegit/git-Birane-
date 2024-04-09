@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heures</title>
+</head>
+<body>
+<script>
+
+var heure = new Date().getHours();
+
+if (heure >= 6 && heure < 12) {
+    document.write("Bonjour !");
+} else if (heure >= 13 && heure < 17) {
+    document.write("Bon après-midi !");
+} else {
+    document.write("Bonne nuit !");
+}
+
+var heure = 20;
+if (heure >= 6 && heure < 12) {
+    document.write("Bonjour !");
+} else if (heure >= 13 && heure < 17) {
+    document.write("Bon après-midi !");
+} else {
+    document.write("Bonne nuit !");
+}
+var nom = "Birane Sambou";
+if (heure >= 6 && heure < 12) {
+    document.write(`Bonjour ${nom} !`);
+} else if (heure >= 13 && heure < 17) {
+    document.write(`Bon après-midi ${nom} !`);
+} else {
+    document.write(`Bonne nuit ${nom} !`);
+}
+</script>
+</body>
+</html>

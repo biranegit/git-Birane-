@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Challenge-exercices</title>
+</head>
+<body>
+<script>
+
+var nom = "Birane Sambou"; 
+
+
+console.log("Je m'appelle : " + nom);
+
+
+var cout = 1 * 5 + 2 * 3 + 1 * 9;
+
+console.log("Coût de la commande : " + cout + " FCFA");
+
+var tax = cout * 0.1;
+
+console.log("Taxe (10%) : " + tax + " FCFA");
+
+
+var totalCout = cout + tax;
+
+console.log("Coût Total : " + totalCout + " FCFA");
+
+var quantite = 1;
+function augmenterQuantite(n) {
+    quantite += n;
+    console.log("Quantité : " + quantite);
+}
+
+
+function retirerDuPanier() {
+    quantite--;
+    console.log("Quantité : " + quantite);
+}
+
+
+function diminuerQuantite(n) {
+    quantite -= n;
+    console.log("Quantité : " + quantite);
+}
+</script>
+
+<script>
+    
+    var quantite = 1;
+    function augmenterQuantite(n) {
+        if (quantite + n > 10) {
+            alert("Le panier est plein !");
+        } else {
+            quantite += n;
+            console.log("Quantité : " + quantite);
+        }
+    }
+    
+    
+    function retirerDuPanier() {
+        if (quantite <= 0) {
+            alert("Pas assez d'articles dans le panier !");
+        } else {
+            quantite--;
+            console.log("Quantité : " + quantite);
+        }
+    }
+    
+    function diminuerQuantite(n) {
+        if (quantite - n < 0) {
+            alert("Pas assez d'articles dans le panier !");
+        } else {
+            quantite -= n;
+            console.log("Quantité : " + quantite);
+        }
+    }
+</script>
+<button onclick="augmenterQuantite(1)">+1</button>
+<button onclick="augmenterQuantite(2)">+2</button>
+<button onclick="retirerDuPanier()">Remove from cart</button>
+<button onclick="diminuerQuantite(2)">-2</button>
+<button onclick="diminuerQuantite(3)">-3</button>
+    
+</body>
+</html>

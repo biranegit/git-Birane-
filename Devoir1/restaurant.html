@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant et panier</title>
+</head>
+<body>
+
+<script>
+
+    var cafeCost = 5;
+    var baguetteCost = 3;
+    var soupeCost = 9;
+
+    var cout = 1 * cafeCost + 2 * baguetteCost + 1 * soupeCost;
+
+    console.log('Coût de la commande : $' + cout);
+
+    var taxe = cout * 0.1;
+
+    console.log('Taxe (10%) : $' + taxe);
+
+    var totalCout = cout + taxe;
+
+    console.log('Cout Total : $' + totalCout);
+</script>
+
+<!-- Le projet de quantité de panier ou Cart -->
+<script>
+    var quantitePanier = 0;
+
+    quantitePanier += 4; 
+    quantitePanier += 5; 
+    
+    quantitePanier--; 
+    
+    quantitePanier -= 2; 
+    quantitePanier -= 3; 
+
+    console.log('Quantité dans le panier : ' + quantitePanier);
+</script>
+
+</body>
+</html>

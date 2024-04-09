@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+</head>
+<body>
+    <h1>Calculatrice</h1>
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+        <button onclick="addToCalculation('1')">1</button>
+        <button onclick="addToCalculation('2')">2</button>
+        <button onclick="addToCalculation('3')">3</button>
+        <button onclick="addToCalculation('+')">+</button>
+        <br>
+        <button onclick="addToCalculation('4')">4</button>
+        <button onclick="addToCalculation('5')">5</button>
+        <button onclick="addToCalculation('6')">6</button>
+        <button onclick="addToCalculation('-')">-</button>
+        <br>
+        <button onclick="addToCalculation('7')">7</button>
+        <button onclick="addToCalculation('8')">8</button>
+        <button onclick="addToCalculation('9')">9</button>
+        <button onclick="addToCalculation('*')">*</button>
+        <br>
+        <button onclick="addToCalculation('0')">0</button>
+        <button onclick="addToCalculation('.')">.</button>
+        <button onclick="clearCalculation()">C</button>
+        <button onclick="addToCalculation('/')">/</button>
+        <br>
+        <button onclick="calculate()">=</button>
+    </div>
+
+    <script>
+        let calculation = '';
+
+        function addToCalculation(value) {
+            calculation += value;
+            document.getElementById('display').value = calculation;
+        }
+
+        function clearCalculation() {
+            calculation = '';
+            document.getElementById('display').value = '';
+        }
+
+        function calculate() {
+            let result = eval(calculation);
+            document.getElementById('display').value = result;
+            calculation = '';
+        }
+    </script>
+</body>
+</html>
